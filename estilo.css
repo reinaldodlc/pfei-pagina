@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', sans-serif; /* Tipografia principal */
     margin: 0;
     padding-top: 120px; /* Espaço para o cabeçalho e menu fixos */
-    background: linear-gradient(to right, #00BFFF, #00FFFF); /* Gradiente blue e cyan */
+    background: linear-gradient(to right, blue, #00FFFF); /* Gradiente blue e cyan */
     color: #333;
     line-height: 1.6;
 }

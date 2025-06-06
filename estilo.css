@@ -5,7 +5,7 @@
 body {
     font-family: 'Roboto', sans-serif; /* Tipografia principal */
     margin: 0;
-    padding-top: 120px; /* Espaço para o cabeçalho e menu fixos */
+    padding-top: 170px; /* Ajuste o padding para acomodar o cabeçalho e o menu dentro dele */
     background: linear-gradient(to right, blue, #00FFFF); /* Gradiente blue e cyan */
     color: #333;
     line-height: 1.6;
@@ -34,20 +34,65 @@ body {
 #cabecalho p {
     font-size: 1.1em;
     margin-top: 10px;
+    margin-bottom: 20px; /* Adiciona espaço abaixo do parágrafo antes do menu */
 }
 
-/* Estilo do menu de navegação*/
+/* Estilo do menu de navegação dentro do cabeçalho */
 #menu-navegacao {
     background-color: #34495e; /* Cor ligeiramente mais clara que o cabeçalho */
     padding: 15px 0;
     text-align: center;
-    position: fixed; /* Fixa o menu */
-    width: 100%;
-    top: 90px; /* Abaixo do cabeçalho */
-    left: 0;
-    z-index: 999; /* Fica abaixo do cabeçalho, mas acima do conteúdo */
+    width: 100%; /* Ocupa toda a largura do cabeçalho */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+#menu-navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre os itens do menu */
+}
+
+#menu-navegacao li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+#menu-navegacao li a:hover {
+    background-color: #e67e22; /* Cor de destaque ao passar o mouse */
+    border-radius: 5px;
+}
+
+/* Estilo do menu de navegação quando clicado (será adicionado via JavaScript) */
+#menu-navegacao.clicked {
+    background-color: #1a659e; /* Uma cor diferente para o menu quando clicado */
+}
+
+/* Estilo para ícones de redes sociais */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #2c3e50; /* Cor dos ícones */
+    font-size: 2.5em; /* Tamanho dos ícones */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: rotate(360deg); /* Rotação ao passar o mouse */
+    color: #e67e22; /* Cor ao passar o mouse */
+}
+
 
 /* Estilo das seções */
 main {

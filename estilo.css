@@ -37,76 +37,16 @@ body {
 }
 
 /* Estilo do menu de navegação*/
-/*#menu-navegacao {
+#menu-navegacao {
     background-color: #34495e; /* Cor ligeiramente mais clara que o cabeçalho */
-    /*padding: 15px 0;
+    padding: 15px 0;
     text-align: center;
     position: fixed; /* Fixa o menu */
-   /* width: 100%;
+    width: 100%;
     top: 90px; /* Abaixo do cabeçalho */
-    /*left: 0;
+    left: 0;
     z-index: 999; /* Fica abaixo do cabeçalho, mas acima do conteúdo */
-    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}*/
-
-/* Menu de Navegação */
-
-nav {
-    background-color: var(--cor-terciaria);
-    padding: 0.8rem 0;
-    position: sticky; /* Mantém o menu fixo */
-    top: 106px; /* Ajuste para ficar abaixo do cabeçalho */
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição para hover */
-}
-
-nav ul li a:hover {
-    background-color: var(--cor-secundaria); /* Mudança de fundo no hover */
-    color: var(--cor-primaria); /* Mudança de cor da fonte no hover */
-
-#menu-navegacao ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Para alinhar os itens horizontalmente */
-    justify-content: center;
-}
-
-#menu-navegacao li {
-    margin: 0 20px;
-}
-
-#menu-navegacao a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
-    border-radius: 5px;
-}
-
-#menu-navegacao a:hover {
-    background-color: #e67e22; /* Laranja no hover */
-    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo das seções */

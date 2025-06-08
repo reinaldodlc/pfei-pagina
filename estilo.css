@@ -4,15 +4,15 @@
 /* Estilos gerais do corpo da página */
 html {
     scroll-behavior: smooth; /* Adiciona rolagem suave ao clicar em links âncora */
-    /* Ajuste do padding para garantir que o cabeçalho fixo não esconda o conteúdo ao rolar para uma âncora */
-    scroll-padding-top: 100px; /* **AJUSTADO: Valor para desktop** */
+    /* **ALTERAÇÃO:** Ajustado para um espaçamento menor no desktop. Isso evita que o cabeçalho fixo cubra o título da seção ao rolar para a âncora. */
+    scroll-padding-top: 80px; /* Valor ajustado para desktop */
 }
 
 body {
     font-family: 'Roboto', sans-serif; /* Tipografia principal */
     margin: 0;
-    /* Ajustado o padding para acomodar o cabeçalho fixo */
-    padding-top: 100px; /* **AJUSTADO: Valor para desktop** */
+    /* **ALTERAÇÃO:** Reduzido o padding superior para diminuir o espaço entre o cabeçalho fixo e o início do conteúdo principal. */
+    padding-top: 80px; /* Valor ajustado para desktop */
     background: linear-gradient(to right, blue, #00FFFF); /* Gradiente blue e cyan */
     color: #333;
     line-height: 1.6;
@@ -208,13 +208,13 @@ section a:hover {
 /* Ajustes para telas menores (smartphones, por exemplo) */
 @media (max-width: 768px) {
     html {
-        /* Ajustado o padding de rolagem para telas menores */
-        scroll-padding-top: 180px; /* **AJUSTADO: Valor para telas menores** */
+        /* **ALTERAÇÃO:** Ajustado para um espaçamento menor em telas menores, considerando que o cabeçalho pode ficar mais alto. */
+        scroll-padding-top: 130px; /* Valor ajustado para telas menores */
     }
 
     body {
-        /* Ajusta o padding para o cabeçalho em telas menores */
-        padding-top: 180px; /* **AJUSTADO: Valor para telas menores** */
+        /* **ALTERAÇÃO:** Reduzido o padding superior para telas menores. */
+        padding-top: 130px; /* Valor ajustado para telas menores */
     }
 
     .nome-principal {
@@ -254,13 +254,13 @@ section a:hover {
 /* Ajustes para telas bem pequenas (celulares antigos) */
 @media (max-width: 480px) {
     html {
-        /* Ajustado o padding de rolagem para telas muito pequenas */
-        scroll-padding-top: 200px; /* **AJUSTADO: Valor para telas muito pequenas** */
+        /* **ALTERAÇÃO:** Ajustado para um espaçamento menor em telas muito pequenas. */
+        scroll-padding-top: 150px; /* Valor ajustado para telas muito pequenas */
     }
 
     body {
-        /* Ajusta mais o padding para telas muito pequenas */
-        padding-top: 200px; /* **AJUSTADO: Valor para telas muito pequenas** */
+        /* **ALTERAÇÃO:** Reduzido o padding superior para telas muito pequenas. */
+        padding-top: 150px; /* Valor ajustado para telas muito pequenas */
     }
 
     .nome-principal {

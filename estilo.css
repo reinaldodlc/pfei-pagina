@@ -143,6 +143,17 @@ section h2 {
     flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
 }
 
+.media-container{
+    width: 100px;
+    height: 100px;
+    border-radius: 50% ;
+    margin: 0 auto 10px;
+    border: 3px solid #23cdf4;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+
 /* Estilo para o container de mídia (imagens e vídeos) */
 .media-container {
     flex: 1; /* Permite que o container de mídia cresça e ocupe o espaço disponível */

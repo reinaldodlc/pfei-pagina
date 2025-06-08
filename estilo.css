@@ -1,3 +1,134 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif; /* Tipografia principal */
+    margin: 0;
+    padding-top: 200px; /* Ajuste o padding para acomodar o cabeçalho fixo e mais alto */
+    background: linear-gradient(to right, blue, #00FFFF); /* Gradiente blue e cyan */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+#cabecalho {
+    background-color: #2c3e50; /* Cor escura para o cabeçalho */
+    color: white;
+    padding: 20px 0; /* Mais padding superior/inferior para o conteúdo */
+    text-align: center;
+    position: fixed; /* Fixa o cabeçalho */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex; /* Adiciona Flexbox para organizar o conteúdo interno */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Container para o conteúdo principal do cabeçalho */
+.cabecalho-conteudo {
+    width: 100%; /* Ocupa a largura total do cabeçalho */
+    max-width: 900px; /* Limita a largura máxima do conteúdo */
+    padding: 0 20px; /* Padding nas laterais */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+.nome-principal {
+    font-family: 'Montserrat', sans-serif; /* Tipografia diferente para o título */
+    margin: 0;
+    font-size: 2.5em;
+    padding-bottom: 10px; /* Espaço abaixo do nome */
+}
+
+/* Estilo para ícones de redes sociais no cabeçalho */
+.social-icons-header {
+    margin-bottom: 15px; /* Espaço abaixo dos ícones */
+    display: flex; /* Usa Flexbox para os ícones */
+    justify-content: center; /* Centraliza os ícones */
+    gap: 20px; /* Espaço entre os ícones */
+}
+
+.social-icons-header a {
+    color: #ecf0f1; /* Cor dos ícones mais clara para o cabeçalho */
+    font-size: 1.8em; /* Tamanho dos ícones */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons-header a:hover {
+    transform: scale(1.2); /* Aumenta um pouco ao passar o mouse */
+    color: #e67e22; /* Cor ao passar o mouse */
+}
+
+
+/* Estilo do menu de navegação dentro do cabeçalho */
+#menu-navegacao {
+    background-color: #34495e; /* Cor ligeiramente mais clara que o cabeçalho */
+    padding: 15px 0;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura do cabeçalho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#menu-navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre os itens do menu */
+}
+
+#menu-navegacao li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+#menu-navegacao li a:hover {
+    background-color: #e67e22; /* Cor de destaque ao passar o mouse */
+    border-radius: 5px;
+}
+
+/* Estilo do menu de navegação quando clicado (será adicionado via JavaScript) */
+#menu-navegacao.clicked {
+    background-color: #1a659e; /* Uma cor diferente para o menu quando clicado */
+}
+
+
+/* Estilo das seções */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: #ecf0f1; /* Cor de fundo diferente para as seções */
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Animação de translação */
+}
+
+section:hover {
+    transform: translateX(10px); /* Translação ao passar o mouse */
+}
+
+section h2 {
+    color: #2c3e50;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
 /* Estilo para envolver o conteúdo de mídia e texto */
 .content-wrapper {
     display: flex; /* Habilita o Flexbox */
@@ -46,8 +177,54 @@
     border-radius: 10px;
 }
 
-/* Media query para telas menores (smartphones, por exemplo) */
+/* Estilo para links dentro das seções */
+section a {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do rodapé */
+#rodape {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+
+/* --- Media Queries para Responsividade --- */
+
+/* Ajustes para telas menores (smartphones, por exemplo) */
 @media (max-width: 768px) {
+    body {
+        padding-top: 250px; /* Aumenta o padding para o cabeçalho em telas menores se ele ficar mais alto */
+    }
+
+    .nome-principal {
+        font-size: 1.8em; /* Diminui o tamanho do nome */
+    }
+
+    .social-icons-header {
+        gap: 15px; /* Diminui o espaçamento entre os ícones */
+    }
+
+    .social-icons-header a {
+        font-size: 1.5em; /* Diminui o tamanho dos ícones */
+    }
+
+    #menu-navegacao ul {
+        flex-direction: column; /* Empilha os botões do menu verticalmente */
+        gap: 10px; /* Espaço entre os botões empilhados */
+        padding: 0 10px;
+    }
+
     .content-wrapper {
         flex-direction: column; /* Em telas pequenas, empilha os itens (mídia em cima, texto embaixo) */
         align-items: center; /* Centraliza os itens quando empilhados */
@@ -61,5 +238,33 @@
 
     .media-container .imagem-secao {
         margin-bottom: 20px; /* Adiciona espaço abaixo da imagem quando empilhada */
+    }
+}
+
+/* Ajustes para telas bem pequenas (celulares antigos) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 280px; /* Ajusta mais o padding para telas muito pequenas */
+    }
+
+    .nome-principal {
+        font-size: 1.5em;
+    }
+
+    .social-icons-header {
+        gap: 10px;
+    }
+
+    .social-icons-header a {
+        font-size: 1.2em;
+    }
+
+    #menu-navegacao {
+        padding: 10px 0;
+    }
+
+    #menu-navegacao li a {
+        font-size: 1em;
+        padding: 8px 10px;
     }
 }

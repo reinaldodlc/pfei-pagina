@@ -230,9 +230,15 @@ section a:hover {
     }
 
     #menu-navegacao ul {
-        flex-direction: column; /* Empilha os botões do menu verticalmente */
-        gap: 10px; /* Espaço entre os botões empilhados */
+        /* **ALTERAÇÃO:** Removido 'flex-direction: column' para manter os botões lado a lado no mobile. */
+        flex-direction: row; /* Mantém os itens em linha */
+        justify-content: space-around; /* Distribui o espaço uniformemente entre os itens */
+        gap: 10px; /* Espaço entre os botões */
         padding: 0 10px;
+    }
+
+    #menu-navegacao li a {
+        padding: 10px 15px; /* Ajusta o padding para melhor toque no mobile */
     }
 
     .content-wrapper {
@@ -280,7 +286,7 @@ section a:hover {
     }
 
     #menu-navegacao li a {
-        font-size: 1em;
+        font-size: 0.9em; /* Tamanho da fonte menor para telas muito pequenas */
         padding: 8px 10px;
     }
 }

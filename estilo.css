@@ -5,14 +5,14 @@
 html {
     scroll-behavior: smooth; /* Adiciona rolagem suave ao clicar em links âncora */
     /* Ajustado o padding para garantir que o cabeçalho fixo não esconda o conteúdo ao rolar para uma âncora */
-    scroll-padding-top: 200px; /* Valor ajustado para desktop */
+    scroll-padding-top: 150px; /* **ALTERAÇÃO AQUI: Valor ajustado para desktop** */
 }
 
 body {
     font-family: 'Roboto', sans-serif; /* Tipografia principal */
     margin: 0;
     /* Ajustado o padding para acomodar o cabeçalho fixo e mais alto */
-    padding-top: 200px; /* Valor ajustado para desktop */
+    padding-top: 150px; /* **ALTERAÇÃO AQUI: Valor ajustado para desktop** */
     background: linear-gradient(to right, blue, #00FFFF); /* Gradiente blue e cyan */
     color: #333;
     line-height: 1.6;
@@ -49,7 +49,6 @@ body {
     font-size: 2.5em;
     padding-bottom: 10px; /* Espaço abaixo do nome */
 }
-
 
 /* Estilo do menu de navegação dentro do cabeçalho */
 #menu-navegacao {
@@ -88,11 +87,10 @@ body {
     background-color: #1a659e; /* Uma cor diferente para o menu quando clicado */
 }
 
-
 /* Estilo das seções */
 main {
     max-width: 900px;
-    margin: 30px auto;
+    margin: 30px auto; /* Mantido para espaçamento entre as seções e centralização */
     padding: 20px;
 }
 
@@ -205,19 +203,20 @@ section a:hover {
     font-size: 0.9em;
 }
 
+---
 
-/* --- Media Queries para Responsividade --- */
+### Media Queries para Responsividade
 
 /* Ajustes para telas menores (smartphones, por exemplo) */
 @media (max-width: 768px) {
     html {
         /* Aumentado o padding de rolagem para telas menores */
-        scroll-padding-top: 300px; /* Valor ajustado para telas menores */
+        scroll-padding-top: 250px; /* **ALTERAÇÃO AQUI: Valor ajustado para telas menores** */
     }
 
     body {
         /* Aumenta o padding para o cabeçalho em telas menores se ele ficar mais alto */
-        padding-top: 300px; /* Valor ajustado para telas menores */
+        padding-top: 250px; /* **ALTERAÇÃO AQUI: Valor ajustado para telas menores** */
     }
 
     .nome-principal {
@@ -258,12 +257,12 @@ section a:hover {
 @media (max-width: 480px) {
     html {
         /* Aumentado o padding de rolagem para telas muito pequenas */
-        scroll-padding-top: 350px; /* Valor ajustado para telas muito pequenas */
+        scroll-padding-top: 280px; /* **ALTERAÇÃO AQUI: Valor ajustado para telas muito pequenas** */
     }
 
     body {
         /* Ajusta mais o padding para telas muito pequenas */
-        padding-top: 350px; /* Valor ajustado para telas muito pequenas */
+        padding-top: 280px; /* **ALTERAÇÃO AQUI: Valor ajustado para telas muito pequenas** */
     }
 
     .nome-principal {

@@ -2,10 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
 
 /* Estilos gerais do corpo da página */
+html {
+    scroll-behavior: smooth; /* Adiciona rolagem suave ao clicar em links âncora */
+    /* Ajustado o padding para garantir que o cabeçalho fixo não esconda o conteúdo ao rolar para uma âncora */
+    scroll-padding-top: 200px; /* Valor ajustado para desktop */
+}
+
 body {
     font-family: 'Roboto', sans-serif; /* Tipografia principal */
     margin: 0;
-    padding-top: 200px; /* Ajuste o padding para acomodar o cabeçalho fixo e mais alto */
+    /* Ajustado o padding para acomodar o cabeçalho fixo e mais alto */
+    padding-top: 200px; /* Valor ajustado para desktop */
     background: linear-gradient(to right, blue, #00FFFF); /* Gradiente blue e cyan */
     color: #333;
     line-height: 1.6;
@@ -41,25 +48,6 @@ body {
     margin: 0;
     font-size: 2.5em;
     padding-bottom: 10px; /* Espaço abaixo do nome */
-}
-
-/* Estilo para ícones de redes sociais no cabeçalho */
-.social-icons-header {
-    margin-bottom: 15px; /* Espaço abaixo dos ícones */
-    display: flex; /* Usa Flexbox para os ícones */
-    justify-content: center; /* Centraliza os ícones */
-    gap: 20px; /* Espaço entre os ícones */
-}
-
-.social-icons-header a {
-    color: #ecf0f1; /* Cor dos ícones mais clara para o cabeçalho */
-    font-size: 1.8em; /* Tamanho dos ícones */
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.social-icons-header a:hover {
-    transform: scale(1.2); /* Aumenta um pouco ao passar o mouse */
-    color: #e67e22; /* Cor ao passar o mouse */
 }
 
 
@@ -127,6 +115,25 @@ section h2 {
     border-bottom: 2px solid #e67e22;
     padding-bottom: 10px;
     margin-bottom: 20px;
+}
+
+/* Estilo para ícones de redes sociais na seção "Sobre mim" */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #2c3e50; /* Cor dos ícones */
+    font-size: 2.5em; /* Tamanho dos ícones */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: rotate(360deg); /* Rotação ao passar o mouse */
+    color: #e67e22; /* Cor ao passar o mouse */
 }
 
 /* Estilo para envolver o conteúdo de mídia e texto */
@@ -203,20 +210,26 @@ section a:hover {
 
 /* Ajustes para telas menores (smartphones, por exemplo) */
 @media (max-width: 768px) {
+    html {
+        /* Aumentado o padding de rolagem para telas menores */
+        scroll-padding-top: 300px; /* Valor ajustado para telas menores */
+    }
+
     body {
-        padding-top: 250px; /* Aumenta o padding para o cabeçalho em telas menores se ele ficar mais alto */
+        /* Aumenta o padding para o cabeçalho em telas menores se ele ficar mais alto */
+        padding-top: 300px; /* Valor ajustado para telas menores */
     }
 
     .nome-principal {
         font-size: 1.8em; /* Diminui o tamanho do nome */
     }
 
-    .social-icons-header {
-        gap: 15px; /* Diminui o espaçamento entre os ícones */
+    .social-icons {
+        gap: 15px; /* Diminui o espaçamento entre os ícones na seção */
     }
 
-    .social-icons-header a {
-        font-size: 1.5em; /* Diminui o tamanho dos ícones */
+    .social-icons a {
+        font-size: 1.8em; /* Ajusta o tamanho dos ícones na seção para telas menores */
     }
 
     #menu-navegacao ul {
@@ -243,20 +256,26 @@ section a:hover {
 
 /* Ajustes para telas bem pequenas (celulares antigos) */
 @media (max-width: 480px) {
+    html {
+        /* Aumentado o padding de rolagem para telas muito pequenas */
+        scroll-padding-top: 350px; /* Valor ajustado para telas muito pequenas */
+    }
+
     body {
-        padding-top: 280px; /* Ajusta mais o padding para telas muito pequenas */
+        /* Ajusta mais o padding para telas muito pequenas */
+        padding-top: 350px; /* Valor ajustado para telas muito pequenas */
     }
 
     .nome-principal {
         font-size: 1.5em;
     }
 
-    .social-icons-header {
-        gap: 10px;
+    .social-icons {
+        gap: 10px; /* Diminui o espaçamento entre os ícones na seção */
     }
 
-    .social-icons-header a {
-        font-size: 1.2em;
+    .social-icons a {
+        font-size: 1.5em; /* Ajusta o tamanho dos ícones na seção para telas muito pequenas */
     }
 
     #menu-navegacao {

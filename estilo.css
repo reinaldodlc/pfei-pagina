@@ -4,15 +4,15 @@
 /* Estilos gerais do corpo da página */
 html {
     scroll-behavior: smooth; /* Adiciona rolagem suave ao clicar em links âncora */
-    /* Ajustado o padding para garantir que o cabeçalho fixo não esconda o conteúdo ao rolar para uma âncora */
-    scroll-padding-top: 150px; /* **ALTERAÇÃO AQUI: Valor ajustado para desktop** */
+    /* Ajuste do padding para garantir que o cabeçalho fixo não esconda o conteúdo ao rolar para uma âncora */
+    scroll-padding-top: 100px; /* **AJUSTADO: Valor para desktop** */
 }
 
 body {
     font-family: 'Roboto', sans-serif; /* Tipografia principal */
     margin: 0;
-    /* Ajustado o padding para acomodar o cabeçalho fixo e mais alto */
-    padding-top: 150px; /* **ALTERAÇÃO AQUI: Valor ajustado para desktop** */
+    /* Ajustado o padding para acomodar o cabeçalho fixo */
+    padding-top: 100px; /* **AJUSTADO: Valor para desktop** */
     background: linear-gradient(to right, blue, #00FFFF); /* Gradiente blue e cyan */
     color: #333;
     line-height: 1.6;
@@ -203,20 +203,18 @@ section a:hover {
     font-size: 0.9em;
 }
 
----
-
-### Media Queries para Responsividade
+/* --- Media Queries para Responsividade --- */
 
 /* Ajustes para telas menores (smartphones, por exemplo) */
 @media (max-width: 768px) {
     html {
-        /* Aumentado o padding de rolagem para telas menores */
-        scroll-padding-top: 250px; /* **ALTERAÇÃO AQUI: Valor ajustado para telas menores** */
+        /* Ajustado o padding de rolagem para telas menores */
+        scroll-padding-top: 180px; /* **AJUSTADO: Valor para telas menores** */
     }
 
     body {
-        /* Aumenta o padding para o cabeçalho em telas menores se ele ficar mais alto */
-        padding-top: 250px; /* **ALTERAÇÃO AQUI: Valor ajustado para telas menores** */
+        /* Ajusta o padding para o cabeçalho em telas menores */
+        padding-top: 180px; /* **AJUSTADO: Valor para telas menores** */
     }
 
     .nome-principal {
@@ -256,13 +254,13 @@ section a:hover {
 /* Ajustes para telas bem pequenas (celulares antigos) */
 @media (max-width: 480px) {
     html {
-        /* Aumentado o padding de rolagem para telas muito pequenas */
-        scroll-padding-top: 280px; /* **ALTERAÇÃO AQUI: Valor ajustado para telas muito pequenas** */
+        /* Ajustado o padding de rolagem para telas muito pequenas */
+        scroll-padding-top: 200px; /* **AJUSTADO: Valor para telas muito pequenas** */
     }
 
     body {
         /* Ajusta mais o padding para telas muito pequenas */
-        padding-top: 280px; /* **ALTERAÇÃO AQUI: Valor ajustado para telas muito pequenas** */
+        padding-top: 200px; /* **AJUSTADO: Valor para telas muito pequenas** */
     }
 
     .nome-principal {
